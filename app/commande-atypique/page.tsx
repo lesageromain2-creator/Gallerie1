@@ -11,7 +11,7 @@ export default function CommandeAtypiquePage() {
     name: "",
     email: "",
     phone: "",
-    project_type: "serigraphie",
+    project_type: "peinture",
     dimensions: "",
     budget_range: "",
     description: "",
@@ -32,7 +32,7 @@ export default function CommandeAtypiquePage() {
         description: form.description,
       });
       setSent(true);
-      setForm({ name: "", email: "", phone: "", project_type: "serigraphie", dimensions: "", budget_range: "", description: "" });
+      setForm({ name: "", email: "", phone: "", project_type: "peinture", dimensions: "", budget_range: "", description: "" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur lors de l'envoi.");
     } finally {
@@ -45,7 +45,7 @@ export default function CommandeAtypiquePage() {
       <div className="max-w-xl mx-auto px-4 py-12 text-center">
         <h1 className="font-heading text-3xl text-accent mb-4">Demande envoyée</h1>
         <p className="font-body text-secondary/80">
-          Nous étudierons votre projet (commande hors-série, projet collectif, tirage sur mesure) et vous recontacterons rapidement.
+          Nous étudierons votre projet (œuvre sur mesure, fresque, collaboration) et vous recontacterons rapidement.
         </p>
       </div>
     );
@@ -54,9 +54,9 @@ export default function CommandeAtypiquePage() {
   return (
     <div className="max-w-xl mx-auto px-4 py-12 md:py-16">
       <div className="border-t border-secondary/10 pt-8">
-        <h1 className="font-heading text-4xl text-accent">Commandes hors-série</h1>
+        <h1 className="font-heading text-4xl text-accent">Projets sur mesure</h1>
         <p className="font-body text-secondary/80 mt-2">
-          Projets collectifs, tirages sur mesure, séries personnalisées. Décrivez-nous votre projet.
+          Œuvres personnalisées, fresques murales, collaborations. Décrivez-nous votre projet.
         </p>
       </div>
 
@@ -78,10 +78,10 @@ export default function CommandeAtypiquePage() {
         <div>
           <label htmlFor="project_type" className="block font-body text-sm font-medium text-secondary mb-1">Type de projet *</label>
           <select id="project_type" required value={form.project_type} onChange={(e) => setForm({ ...form, project_type: e.target.value })} className="w-full px-4 py-2 border border-secondary/20 bg-primary text-secondary font-body rounded-sm">
-            <option value="serigraphie">Sérigraphie</option>
-            <option value="fresque">Fresque</option>
-            <option value="dessin">Dessin</option>
-            <option value="tirage-serie">Tirage / série</option>
+            <option value="peinture">Peinture / œuvre unique</option>
+            <option value="fresque">Fresque murale</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="commande">Commande sur mesure</option>
             <option value="autre">Autre</option>
           </select>
         </div>

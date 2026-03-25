@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 
 // Données statiques en attendant GET /api/artworks/:siteId (filtré par category/série)
 const SERIES = [
-  { slug: "chimères", title: "Chimères", count: "5 tirages", image: "/images/atelier-4.png", technique: "Sérigraphie" },
-  { slug: "botanique", title: "Botanique", count: "8 tirages", image: "/images/atelier-5.png", technique: "Sérigraphie" },
-  { slug: "curiosites", title: "Curiosités", count: "6 tirages", image: "/images/atelier-6.png", technique: "Estampe" },
+  { slug: "abstraction", title: "Abstraction", count: "8 œuvres", image: "/images/atelier-4.jpg", technique: "Acrylique" },
+  { slug: "paysages", title: "Paysages", count: "6 œuvres", image: "/images/atelier-5.jpg", technique: "Techniques mixtes" },
+  { slug: "portraits", title: "Portraits", count: "5 œuvres", image: "/images/atelier-6.jpg", technique: "Huile" },
 ];
 
 export default function SeriesPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 md:py-20">
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="border-t border-secondary/10 pt-8">
-        <h1 className="font-heading text-4xl md:text-5xl text-accent">Petites séries</h1>
+        <h1 className="font-heading text-4xl md:text-5xl text-accent">Collections</h1>
         <p className="font-body text-secondary/80 text-lg mt-4">
-          Tirages numérotés en petites séries, disponibles à l&apos;atelier ou sur demande.
+          Œuvres uniques et séries limitées, disponibles à l&apos;atelier ou sur demande.
         </p>
       </motion.div>
 

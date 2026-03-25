@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #F2E8D9;
-  --color-secondary: #1A1A2E;
-  --color-accent: #E63946;
+  --color-primary: #faf5ff;
+  --color-secondary: #4c1d95;
+  --color-accent: #f59e0b;
+  --color-sparkle: #ec4899;
+  /* Texte sur bandeaux colorés (crème chaud) */
+  --color-band-fg: #fef3c7;
+  --color-band-fg-muted: #fde68a;
 }
 
 body {
   font-family: var(--font-body), Georgia, serif;
-  background: var(--color-primary);
+  background: linear-gradient(180deg, var(--color-primary) 0%, #fff7ed 55%, #fdf4ff 100%);
   color: var(--color-secondary);
 }
 
@@ -30,5 +34,5 @@ body {
 }
 
 .animate-media-carousel {
-  animation: mediaCarousel 35s linear infinite;
+  animation: mediaCarousel 70s linear infinite;
 }

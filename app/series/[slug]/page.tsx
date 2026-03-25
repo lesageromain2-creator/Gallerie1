@@ -5,26 +5,26 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 const SERIES_DATA: Record<string, { title: string; technique: string; edition: string; description: string; image: string }> = {
-  chimères: {
-    title: "Chimères",
-    technique: "Sérigraphie",
-    edition: "Tirages numérotés, série limitée",
-    description: "Petite série de chimères en sérigraphie, inspirée des curiosités et de l'univers du Shopayado.",
-    image: "/images/atelier-4.png",
+  abstraction: {
+    title: "Abstraction",
+    technique: "Acrylique",
+    edition: "Œuvres uniques, série limitée",
+    description: "Série de tableaux abstraits explorant la couleur et la matière. Jeux de superposition et textures.",
+    image: "/images/atelier-4.jpg",
   },
-  botanique: {
-    title: "Botanique",
-    technique: "Sérigraphie",
-    edition: "Tirages numérotés",
-    description: "Estampes végétales et motifs botaniques, encres à base d'eau.",
-    image: "/images/atelier-5.png",
+  paysages: {
+    title: "Paysages",
+    technique: "Techniques mixtes",
+    edition: "Œuvres numérotées",
+    description: "Paysages intérieurs et extérieurs, entre figuration et abstraction. Encres et glacis.",
+    image: "/images/atelier-5.jpg",
   },
-  curiosites: {
-    title: "Curiosités",
-    technique: "Estampe",
-    edition: "Petite série",
-    description: "Curiosités et objets singuliers, tirages en petite série.",
-    image: "/images/atelier-6.png",
+  portraits: {
+    title: "Portraits",
+    technique: "Huile",
+    edition: "Pièces uniques",
+    description: "Portraits sensibles à l'huile, travail du regard et de la lumière.",
+    image: "/images/atelier-6.jpg",
   },
 };
 
@@ -36,15 +36,15 @@ export default function SeriesSlugPage() {
   if (!series) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
-        <h1 className="font-heading text-2xl text-accent">Série introuvable</h1>
-        <Link href="/series" className="mt-4 inline-block text-accent hover:underline">Retour aux séries</Link>
+        <h1 className="font-heading text-2xl text-accent">Collection introuvable</h1>
+        <Link href="/series" className="mt-4 inline-block text-accent hover:underline">Retour aux collections</Link>
       </div>
     );
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 md:py-20">
-      <Link href="/series" className="font-body text-accent hover:underline text-sm mb-8 inline-block">← Séries</Link>
+      <Link href="/series" className="font-body text-accent hover:underline text-sm mb-8 inline-block">← Collections</Link>
 
       <div className="grid md:grid-cols-2 gap-10">
         <div className="aspect-[4/3] relative rounded-lg overflow-hidden bg-primary">

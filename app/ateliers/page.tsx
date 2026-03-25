@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 
 // Données statiques en attendant GET /api/workshops/:siteId
 const WORKSHOPS = [
-  { slug: "initiation-serigraphie", title: "Initiation à la sérigraphie", description: "Découverte du process en une demi-journée. Vous repartez avec vos tirages.", duration: "3h", price: "65", image: "/images/atelier-1.png" },
-  { slug: "atelier-libre", title: "Atelier libre", description: "Utilisation de l'atelier et du matériel pour vos projets personnels, avec accompagnement.", duration: "2h ou 4h", price: "sur devis", image: "/images/atelier-2.png" },
-  { slug: "stage-week-end", title: "Stage week-end", description: "Deux jours pour approfondir : préparation des écrans, encrage, tirages en série.", duration: "2 jours", price: "180", image: "/images/atelier-3.png" },
+  { slug: "initiation-peinture", title: "Initiation à la peinture contemporaine", description: "Découverte des techniques mixtes en une demi-journée. Vous repartez avec votre première création.", duration: "3h", price: "75", image: "/images/atelier-1.jpg" },
+  { slug: "atelier-libre", title: "Atelier libre", description: "Utilisation de l'atelier et du matériel pour vos projets personnels, avec accompagnement de Marie Laurent.", duration: "2h ou 4h", price: "sur devis", image: "/images/atelier-2.jpg" },
+  { slug: "stage-week-end", title: "Stage week-end", description: "Deux jours pour approfondir : composition, superposition, finitions. Créez une œuvre aboutie.", duration: "2 jours", price: "220", image: "/images/atelier-3.jpg" },
 ];
 
 export default function AteliersPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 md:py-20">
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="border-t border-secondary/10 pt-8">
-        <h1 className="font-heading text-4xl md:text-5xl text-accent">Ateliers & workshops</h1>
+        <h1 className="font-heading text-4xl md:text-5xl text-accent">Ateliers & stages</h1>
         <p className="font-body text-secondary/80 text-lg mt-4">
-          Initiation à la sérigraphie, découverte de l&apos;atelier. Sur réservation.
+          Initiation à la peinture contemporaine, techniques mixtes et expression personnelle. Sur réservation.
         </p>
       </motion.div>
 

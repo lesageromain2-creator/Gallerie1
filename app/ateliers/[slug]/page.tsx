@@ -6,27 +6,27 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 
 const WORKSHOPS: Record<string, { title: string; description: string; duration: string; price: string; image: string; level?: string }> = {
-  "initiation-serigraphie": {
-    title: "Initiation à la sérigraphie",
-    description: "Découverte du process en une demi-journée : préparation du visuel, insolation de l'écran, lavage, réglage et tirage. Vous repartez avec vos tirages sur papier.",
+  "initiation-peinture": {
+    title: "Initiation à la peinture contemporaine",
+    description: "Découverte des techniques mixtes en une demi-journée : composition, superposition, finitions. Vous repartez avec votre première création.",
     duration: "3h",
-    price: "65",
-    image: "/images/atelier-1.png",
+    price: "75",
+    image: "/images/atelier-1.jpg",
     level: "Débutant",
   },
   "atelier-libre": {
     title: "Atelier libre",
-    description: "Utilisation de l'atelier et du matériel pour vos projets personnels, avec accompagnement sur les réglages et les encres.",
+    description: "Utilisation de l'atelier et du matériel pour vos projets personnels, avec accompagnement de Marie Laurent.",
     duration: "2h ou 4h",
     price: "sur devis",
-    image: "/images/atelier-2.png",
+    image: "/images/atelier-2.jpg",
   },
   "stage-week-end": {
     title: "Stage week-end",
-    description: "Deux jours pour approfondir : préparation des écrans, encrage, tirages en série. Idéal pour réaliser une petite édition.",
+    description: "Deux jours pour approfondir : composition, superposition, finitions. Créez une œuvre aboutie.",
     duration: "2 jours",
-    price: "180",
-    image: "/images/atelier-3.png",
+    price: "220",
+    image: "/images/atelier-3.jpg",
     level: "Initié",
   },
 };
@@ -62,7 +62,7 @@ export default function AtelierSlugPage() {
             <li>Tarif : {workshop.price} €</li>
           </ul>
           <Link
-            href={`/reservation?atelier=${encodeURIComponent(slug)}`}
+            href="/contact"
             className="mt-8 inline-block px-6 py-3 bg-accent text-primary font-body font-semibold rounded-sm hover:opacity-90 transition-opacity"
           >
             Réserver cet atelier

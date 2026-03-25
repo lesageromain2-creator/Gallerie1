@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { postContact } from "@/lib/api";
 
 export default function ContactPage() {
@@ -28,26 +29,24 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
       <div className="border-t border-secondary/10 pt-6">
         <h1 className="font-heading text-4xl text-accent">Contact</h1>
-        <p className="font-body text-secondary/80 text-sm mt-2">63 montée de la Grande Côte, 69001 Lyon — Jeu–Sam 11h–19h</p>
+        <p className="font-body text-secondary/80 text-sm mt-2">12 rue des Arts, 75006 Paris — Mer–Sam 14h–19h</p>
       </div>
       <div className="grid md:grid-cols-2 gap-12 mt-10">
         <div>
           <p className="font-heading font-semibold text-secondary mb-2">Nous trouver</p>
-          <p className="font-body text-secondary/80 text-sm mb-2">63 montée de la Grande Côte, 69001 Lyon</p>
-          <p className="font-body text-secondary/80 text-sm mb-2"><a href="tel:0625124447" className="text-accent hover:underline">06 25 12 44 47</a></p>
-          <p className="font-body text-secondary/80 text-sm mb-4"><a href="mailto:contact@leshopayado.fr" className="text-accent hover:underline">contact@leshopayado.fr</a></p>
-          <div className="aspect-video overflow-hidden rounded-lg bg-secondary/10">
-            <iframe
-              title="Le Shopayado, Lyon"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.340892783!2d4.829515!3d45.7707124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb3670cf02ab%3A0xf08d982cc2f83dfe!2sLe%20Shopayado!5e0!3m2!1sfr!2sfr!4v1640000000000!5m2!1sfr!2sfr"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
-            />
+          <p className="font-body text-secondary/80 text-sm mb-2">12 rue des Arts, 75006 Paris</p>
+          <p className="font-body text-secondary/80 text-sm mb-2"><a href="tel:0142861234" className="text-accent hover:underline">01 42 86 12 34</a></p>
+          <p className="font-body text-secondary/80 text-sm mb-4"><a href="mailto:contact@atelier-lumiere.fr" className="text-accent hover:underline">contact@atelier-lumiere.fr</a></p>
+          <div className="aspect-video overflow-hidden rounded-lg bg-secondary/10 border border-secondary/15 flex flex-col items-center justify-center p-6 text-center min-h-[200px]">
+            <p className="font-body text-secondary/90 text-sm mb-4">
+              Carte interactive (démo) : ce site illustre une vitrine. Pour une vraie intégration Google Maps et vos besoins métiers, consultez la page dédiée.
+            </p>
+            <Link
+              href="/demo-google-maps"
+              className="inline-block px-4 py-2 rounded-sm bg-accent text-secondary font-body font-semibold text-sm hover:opacity-90 transition-opacity"
+            >
+              Informations carte & démo
+            </Link>
           </div>
         </div>
         <div>
