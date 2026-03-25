@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ATELIER_REVIEWS, ATELIER_MEDIAS, PROCESS_ETAPES } from "@/lib/atelier-data";
+import LyonAccueilSection from "@/components/LyonAccueilSection";
 
 const POLAROID_IMGS = ["/images/atelier-1.jpg", "/images/atelier-2.jpg", "/images/atelier-3.jpg", "/images/atelier-4.jpg", "/images/atelier-5.jpg", "/images/atelier-6.jpg"];
 
@@ -30,7 +31,7 @@ export default function HomePage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          Peinture contemporaine, ateliers créatifs et œuvres uniques. Marie Laurent, Paris.
+          Peinture contemporaine, ateliers créatifs et œuvres uniques. Marie Laurent, Lyon.
         </motion.p>
         <div className="relative z-10 mt-8">
           <Link
@@ -91,6 +92,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <LyonAccueilSection />
 
       {/* Avis Google */}
       <section className="py-16 md:py-24 bg-violet-950 bg-gallery-band text-white">
