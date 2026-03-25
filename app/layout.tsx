@@ -15,7 +15,13 @@ const fontBody = Outfit({
   variable: "--font-body",
 });
 
+/** Canonique pour OG / Twitter ; sur Vercel, définir NEXT_PUBLIC_SITE_URL en prod (optionnel mais recommandé). */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Atelier Lumière | Peinture contemporaine & ateliers créatifs, Paris Saint-Germain",
   description: "Atelier d'art et peinture contemporaine à Paris. Marie Laurent — Atelier Lumière. 12 rue des Arts, 6e.",
   keywords: ["peinture Paris", "atelier art", "Atelier Lumière", "Marie Laurent", "Saint-Germain", "art contemporain"],
